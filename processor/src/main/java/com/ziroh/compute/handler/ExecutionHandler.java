@@ -1,8 +1,9 @@
 package com.ziroh.compute.handler;
 
-import com.ziroh.compute.pojo.Input;
-import com.ziroh.compute.pojo.Node;
-import com.ziroh.compute.pojo.Output;
+
+import com.ziroh.common.Input;
+import com.ziroh.common.Node;
+import com.ziroh.common.Output;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

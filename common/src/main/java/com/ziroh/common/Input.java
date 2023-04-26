@@ -1,4 +1,4 @@
-package com.ziroh.compute.pojo;
+package com.ziroh.common;
 
 import lombok.Data;
 
