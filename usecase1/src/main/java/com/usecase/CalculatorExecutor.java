@@ -30,6 +30,8 @@ public class CalculatorExecutor implements ExecuteHandler {
         int first = (Integer) data.get(0);
         int second = (Integer) data.get(1);
         int result = calculator.add(first, second);
-        return new Output(List.of(result));
+        Output output = new Output();
+        output.setOutputs(List.of(result));
+        return output;
     }
 }
