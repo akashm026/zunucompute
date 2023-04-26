@@ -1,6 +1,6 @@
-package com.ziroh.common.pojo;
-
+package com.ziroh.common;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ziroh.common.LambdaFunction;
 import lombok.*;
 import org.bson.codecs.pojo.annotations.BsonCreator;
 import org.bson.codecs.pojo.annotations.BsonProperty;

@@ -1,4 +1,4 @@
-package com.ziroh.common.pojo;
+package com.ziroh.common;
 
 
 import lombok.AllArgsConstructor;
@@ -6,8 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class LambdaFunction {
     String jarLocation;
     String entryFunction;
