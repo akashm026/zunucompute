@@ -11,6 +11,7 @@
     <modules>
         <module>programmerparadigm</module>
         <module>processor</module>
+        <module>common</module>
     </modules>
 
     <properties>
@@ -18,6 +19,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

@@ -1,8 +1,11 @@
 package com.ziroh.compute.handler;
 
-import com.ziroh.compute.pojo.Input;
-import com.ziroh.compute.pojo.Node;
-import com.ziroh.compute.pojo.Output;
+//import com.ziroh.common.pojo.ExecuteHandler;
+
+import com.ziroh.common.Input;
+import com.ziroh.common.Output;
+import com.ziroh.common.pojo.Node;
+import com.ziroh.handler.ExecuteHandler;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -18,7 +21,9 @@ public class ExecutionHandler {
         try {
             final ClassLoader classLoader = URLClassLoader.newInstance(new URL[]{
                     new URL("file:" + lambdaLocation)
-            }, ExecutionHandler.class.getClassLoader());
+            }, ExecuteHandler.class.getClassLoader());
+
+            System.out.println(lambdaFunction);
 
             final Class<?> loadedClass = Class.forName(lambdaFunction, true, classLoader);
 

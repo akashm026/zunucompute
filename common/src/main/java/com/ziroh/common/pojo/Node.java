@@ -1,4 +1,4 @@
-package com.ziroh.compute.pojo;
+package com.ziroh.common.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
