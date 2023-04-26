@@ -11,14 +11,15 @@ import java.util.List;
  * @author Samarjeet
  */
 public class CalculatorExecutor implements ExecuteHandler {
-    private Calculator calculator;
+    private final Calculator calculator;
 
     public CalculatorExecutor() {
+        calculator = new Calculator();
     }
 
-    public CalculatorExecutor(Calculator calculator) {
-        this.calculator = calculator;
-    }
+//    public CalculatorExecutor(Calculator calculator) {
+//        this.calculator = calculator;
+//    }
 
     @Override
     public Output execute(Input inputs) {
