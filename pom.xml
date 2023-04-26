@@ -11,6 +11,7 @@
     <modules>
         <module>programmerparadigm</module>
         <module>processor</module>
+        <module>usecase1</module>
         <module>common</module>
     </modules>
 

@@ -1,10 +1,8 @@
 package com.ziroh.compute.handler;
 
-//import com.ziroh.common.pojo.ExecuteHandler;
-
 import com.ziroh.common.Input;
+import com.ziroh.common.Node;
 import com.ziroh.common.Output;
-import com.ziroh.common.pojo.Node;
 import com.ziroh.handler.ExecuteHandler;
 
 import java.io.IOException;
@@ -22,13 +20,10 @@ public class ExecutionHandler {
             final ClassLoader classLoader = URLClassLoader.newInstance(new URL[]{
                     new URL("file:" + lambdaLocation)
             }, ExecuteHandler.class.getClassLoader());
-
-            System.out.println(lambdaFunction);
-
+            var calculatorClass = Class.forName("com.usecase.Calculator", true, classLoader); // We need to pass this calculator
             final Class<?> loadedClass = Class.forName(lambdaFunction, true, classLoader);
-
             for (var method : loadedClass.getDeclaredMethods()) {
-                output = (Output) method.invoke(loadedClass.getDeclaredConstructor().newInstance(), input);
+                output = (Output) method.invoke(loadedClass.getDeclaredConstructor(calculatorClass).newInstance(calculatorClass.newInstance()), input);
             }
         } catch (IOException | ClassNotFoundException | InstantiationException | IllegalAccessException |
                  NoSuchMethodException | InvocationTargetException e) {
