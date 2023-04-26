@@ -8,7 +8,7 @@ import com.ziroh.compute.handler.ExecutionHandler;
 public class NewFlowTest {
     public static void main(String[] args) {
         Node node = new Node();
-        node.setLambdaFunction(new LambdaFunction("C:\\ZirohLabs\\oanalytics\\ZunuCompute\\processor\\src\\main\\resources\\usecase1-1.0-SNAPSHOT.jar", "com.usecase.CalculatorExecutor"));
+        node.setLambdaFunction(new LambdaFunction("C:\\ZirohLabs\\oanalytics\\ZunuCompute\\processor\\src\\main\\resources\\my-project-name-jar-with-dependencies.jar", "com.usecase.CalculatorExecutor"));
 
         ExecutionHandler executor  = new ExecutionHandler();
         Input input = new Input();
